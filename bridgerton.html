@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Specifically Bridgerton</title>
+    <link rel="stylesheet" href="./bridgerton.css">
+    <!--<link rel="icon" href="./favicon.ico" type="image/x-icon">thisshould be a flower or something-->
+  </head>
+  <body>
+<header>
+
+<nav class="topNav">
+<h4 class="menu">Menu</h4>
+<label for="menu_checkbox" class="menu_check menu">
+<input type="checkbox" id="menu_checkbox"/>
+<div class="hamburger_menu"></div>
+
+<ul class="navList" id="navList">
+  <li class="menuLink">Main</li>
+  <li class="menuLink">Other Pens</li>
+  <li class="menuLink">Clever Girl</li>
+  <li class="menuLink">Contact Me!</li>
+    </ul>
+    </label>
+    </nav>
+
+  <div class="space"> </div>
+<div class="headerTitle"><h1><i>Specifically</i> Bridgerton</h1>
+<h2> Based on  <a href="https://stuffandnonsense.co.uk/archives/css_specificity_wars.html">CSS Specificity Wars</a></h2></div></header>
+<div id="ytho">
+  <h3>Why write this again?</h3>
+  <p>CSS specificity is very confusing to me. The CSS Specificity Wars helped quite a bit, but I 'm not so much into Star Wars as of late, but very much into regency stories.</p><p> So I've adapted what I've learned and applied it to the little i know of how British Aristocracy works. Really any sort of royalty/class structure will work. </p>
+  <p> I find, personally, learning about something enough that you feel confident enough to consider yourself an expert on it is the easiest way to understand it. With an eye toward teaching others as opposed to an eye to understanding it for myself.  
+</div>
+<div class="button">
+  <button class='useless pushable'><span class="front"><a href="https://stuffandnonsense.co.uk/archives/css_specificity_wars.html">Read the Original here</a></span></button>
+</div>
+
+
+<div id="structure">
+  <div id="queen-div">
+    <h3>The Queen</h3>
+  <p>Let's start at the top, the most specific/honed a selector is the more power it has. In the Royalty this would be the queen.</p><img id="queen-pic" src="https://64.media.tumblr.com/657656fe4fa1d501dd3513ada7a6d47b/84f4e7145999e628-16/s540x810/e1d268846ff04b1d4ef4360ea4d207cf2deeb984.gifv">
+  <p id="aside">Technically it could also be the king, czar, emperor, etc. but this is mine, so it's gonna be women focused.</p> <p> The style selector appears inline in the HTML and is worth 1000 points in the selector point system. However, style selectors are not generally liked very much, and are frowned upon as far as use in CSS. It makes it hard to see where the style is when it is inline. The specificity code for this would be 1,0,0,0. It really can't have multiple in a line, you would just keep reusing the same one.</p><h5> In line CSS should be used sparingly if at all. It overrides everything and can make code confusing. It's not best practice.</h5></div>
+<div id='princess'>
+  <h3>The Princess</h3>
+  <p>The next logical step, I'm sure you can assume is a princess. Not as powerful as a queen, but not necessarily less so. </p>
+  <img id="princess-pic" src="https://64.media.tumblr.com/52d7be7bd592fd667d9edaab809e2afe/91f34af6d9561fa8-f1/s540x810/67f86ef8f9b6f28e34a5f60d729116f14a5446bc.gif">
+<p>A prince would also work, but that's not what it's about. These are ID selectors. So any selector that is <b>#an-id</b>, and would be written in line as id="an-id". These are worth 100 points (written as 1,0,0) and are the best for specificity, but often need to be combined with other selectors to be specific enough to select the right parts of the text. Handy, but should be used in conjunction with other elements.</p> <h5>ID's should NOT be reused. There's no repeat princes or princesses, they're unique.</h5>
+</div>
+<div id='ton'>
+  <h3>The Ton</h3>
+  <p>The next selector is the bulk of the aristocracy. There's a lot of these people. Just like this is the most common selector option</p>
+  <img id="ton-pic" src="https://i.pinimg.com/originals/ed/bb/f3/edbbf3dfd74004f470e7396a367e05d6.gif"><p>Often affectionately referred to as the Ton, these are uppercrust titled and untitled ladies and gentlemen of a certain wealth. In CSS it includes class, attribute, and pseudo class selectors and are worth 10 points. This is written as 0,1,0. This is a really common selector and there are lots of them! This is used in conjunction with the other selectors to make sure that you are specific in picking the right HTML to apply your CSS to.</p><h5>Remember! Classes can be reused! Apply those rules to lots of elements!</h5>
+</div>
+<div id="maids">
+  <h3>The Maids</h3>
+  <p> Last  but not least: maids. They're out here gossiping, and doing all the work that the rich people don't want to do.</p><img id="maid-pic" src='https://64.media.tumblr.com/0c9f23519b8d25254dd23b8ac2f971e8/9225e4933e0c917a-37/s540x810/70edd252a90793f574a2721a43e1781a4f6150c1.gif'><p> Ok not just maids, but anyone who works for their money. Not born with a silver spoon in their mouth, they are element selectors! your <i>a</i> selectors, your <b>p</b> selectors, anything that is generic! These are worth 1 point, written as 0,0,1. Very common, but very necessary, these selectors are out there working hard with the ton to make your CSS look good.</p><h5> These maids are with a prince one day and with a viscountess the next. They get moved around!</h5>
+  </div>
+  </div>
+  <div class="conclusion">
+  <h3>Conclusion</h3>
+  <p>In conclusion, there are a lot of different ways to understand this concept of specificity. The really awesome thing, to me, is that I discovered that VS code has a built in specificity tool. It'll tell you how specific the rule you've made in your CSS is. Positioning and specificity are key. Don't forget it! </p>
+  </div>
+
+</body>
+<footer>
+  <div id="footer-fun">
+    <p>I'm a funny gal, check me out on my socials.</p>
+    <br>
+    <div id="socials">
+    <a href="I don't really want to give these out"><img src="https://i.imgur.com/BtG9UY1.png" alt="a pink bluesky butterfly logo" id="bsbutterfly"></a>
+    <a href="they're kinda personal"><img src="https://i.imgur.com/odVWa6n.png" alt="a pink instagram logo" id="insta"></a>
+    </div>
+  </div>
+</footer>
+  
+</html>

@@ -1,0 +1,335 @@
+/*I'm defaulting the screen to a pixel 7, simply because I own one*/
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Glass+Antiqua&display=swap');
+
+:root{--shadow-color: 0deg 0% 30%;
+    --shadow-elevation-high:0px 1px 0.8px hsl(var(--shadow-color) / 1),
+    0px 2.5px 1.9px -1.2px hsl(var(--shadow-color) / 0.86),
+    0px 13.4px 10.1px -2.5px hsl(var(--shadow-color) / 0.64),
+    0.2px 42.8px 32.1px -3.7px hsl(var(--shadow-color) / 0.43),
+    0.4px 100px 75px -5px hsl(var(--shadow-color) / 0.21);
+    --gradient: linear-gradient(180deg, #e6f3f4, #cfe8ec,#b9dce5,#a4d0df, transparent);
+}
+
+body{
+    background-color:#a4cfdf;
+    margin: auto;
+    font-family: 'Glass Antiqua', cursive;
+    font-size: 25px;
+    overflow-x:hidden;
+    height:100%
+    }
+
+.topNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fcc8c0;
+    color: black;
+    padding: 0 10px;
+    width:100%;
+}
+.menu_check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;    
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.menu_check input{
+    opacity: 0;
+    position: absolute;
+}
+.menu_check input:checked ~.hamburger_menu{
+    transform: translateX(-50px);
+    background-color: transparent;
+}
+.menu_check input:checked ~.hamburger_menu::before{
+    transform:rotate(55deg) translate(25px, -35px);
+}
+.menu_check input:checked ~.hamburger_menu::after{
+    transform:rotate(-45deg) translate(30px, 30px)
+}
+.menu_check input:checked ~.navList{
+    opacity:1;
+    height:100%;
+    left:65%;
+    transition: opacity 0.5s ease, height 0.5s ease, left 0.5s ease;
+}
+.menu_check input:not(:checked) ~ .navList {
+    opacity: 0; /* Change opacity when not checked */
+    height: 0; /* Collapse height when not checked */
+    left: 100%;
+    transition: opacity 0.5s ease, height 0.5s ease, left 0.5s ease;
+}
+
+.hamburger_menu{
+    width:20px;
+    height: 2px;
+    background-color: #f77078;
+    border-radius: 5px;
+    z-index: 10;
+    transition: all .5s ease;
+}
+
+.hamburger_menu::before, .hamburger_menu::after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: #f77078;
+        border-radius: 5px;
+        transition: all .5s ease;
+}
+.hamburger_menu::before{
+    transform: translateY(-6px);
+}
+.hamburger_menu::after{
+    transform: translateY(6px);
+}
+.navList{
+    opacity: 0; /* Start with opacity 0 */
+    height: 0; /* Start with height 0 */
+    overflow: hidden; /* Hide overflowing content */
+    background:#fcc8c0;
+    color:black;
+    position: absolute;
+    left:100%;
+    /*height: 100%;*/
+    width: 40%;
+    top: 8%;
+}
+.navList li{
+    padding: 10px 0;
+    text-align: left;
+    list-style-type: none;
+    transition: all .2s ease;
+}
+.navList li:hover{
+    letter-spacing: 2px;
+    opacity: .6;
+}
+.space{
+    content:"";
+    height:115px;
+}
+
+.headerTitle{ 
+    background-image: url(https://worldofprintables.com/wp-content/uploads/2023/06/Shabby-Chic-Flower-Background-Desktop.jpg);
+    background-position: 50% 100%;
+    background-size:contain;
+    background-attachment:fixed;
+    text-align:center;
+    padding: 45px 0;
+    width:80vw;
+    margin:auto;
+    border: 5px solid #DB3445;
+    border-width: 9px 1px 9px;
+    border-radius: 75px;
+    box-shadow: var(--shadow-elevation-high);
+    }
+.headerTitle > h1{
+    font-size: 16vw;
+}
+#ytho{
+    margin:auto;
+    padding-left:30px;
+    padding-right:30px;
+    }
+.button{
+    padding-top:50px;
+    padding-bottom:50px;
+    width:350px;
+    margin:auto;
+    }
+.useless{
+    margin:auto;
+    display:block;
+    background:#636b53;
+    color:#fcc8c0;
+    font-family:'Delius Swash Caps', cursive;
+    font-size: 1.5em;
+    box-shadow: var(--shadow-elevation-high);
+    }
+.pushable{
+        background:#565E48;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        outline-offset: 4px;
+        padding: 0;
+    }
+.pushable:hover{background:#454B3A}
+.front{
+    background:#788465;
+    display:block;
+    border: 2px solid rgba(255,255,255,.4);
+    padding: 12px 42px;
+    border-radius: 5px;
+    transform:translateY(-6px);
+}
+.front > a{
+    text-decoration: none;
+    color:#FEF8EA;
+}
+
+#structure{
+    display:flex;
+    flex-flow:column;
+    padding:25px;
+    }
+
+#queen-div, #princess, #ton, #maids{
+    background-image: url(https://i.imgur.com/azI7XEN.png);
+    border:5px solid #FCC8C0;
+    border-width: 8px 3px 8px;
+    border-radius:3em 3em 3em 3em;
+    padding:.5em;
+    background-color:#a4cfdf;
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    box-shadow: var(--shadow-elevation-high);
+    margin-bottom:35px;
+    }
+
+#queen-div > h3, #princess > h3, #ton > h3, #maids > h3{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+#queen-div > p, #princess > p, #ton > p, #maids > p{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+#queen-pic,#princess-pic{  
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#ton-pic, #maid-pic{
+    width:80%;
+    display:block;
+    margin:auto;
+}
+#footer-fun{
+    height:110px;
+    background-image: url(https://i.imgur.com/azI7XEN.png);
+    border:5px solid #DB3445;
+    border-width: 9px 0px 0px 0px;
+    border-radius: 5em 5em 0em 0em;
+}
+
+div#footer-fun p{
+    margin-top: 17px;
+    margin-bottom:0px;
+    text-align:center;
+    font-size: 4vw;
+}
+#socials{
+    text-align:center;
+}
+#bsbutterfly, #insta{
+    height:30px;
+}
+.conclusion{
+    width:70%;
+    margin:auto;
+    padding-bottom:65px;
+}
+
+@media only screen and (min-width: 600px){
+    /* for when the screen size is larger than 600px*/
+    .navList{
+        opacity:1;
+        height:100px;
+        display:flex;
+        width:100%;
+        height: auto;
+        margin-top: 0;
+        justify-content: space-evenly;
+        background:none;
+        list-style:none;
+        position:fixed;
+        padding:0;
+        top:0;
+        left:0;
+        background-image:var(--gradient);
+        z-index:9000;
+
+        }
+
+    h4, .hamburger_menu{
+    display:none;
+}
+    .topNav{
+        background-color: #a4cfdf;
+        height:auto;
+    }
+    .menu_check input:not(:checked) ~.navList{
+        opacity:1;
+        height:auto;
+        left: 0;
+    }
+    .menu_check input:checked ~.navList{
+        height:auto;
+        left: 0%;
+    }
+    #menu_checkbox{
+        width:0px;
+    }
+}
+
+
+@media only screen and (min-width: 800px){
+    .headerTitle{
+        padding:75px 0;
+    }
+    .headerTitle > h1{
+        font-size:90px;
+    }
+    div#footer-fun p{
+        font-size:20px;
+    }  
+}
+@media only screen and (min-width:1000px){
+    .headerTitle{
+        width:72%;
+    }
+.button{
+    width:490px;
+}
+#structure{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:25px;
+    width:75%;
+    margin:auto;
+    padding-bottom: 60px;
+}
+#queen-div{
+    grid-column: 1/3;
+}
+#princess{
+    grid-column:3/5;
+}
+#ton{
+    grid-column:1/3;
+}
+#maids{
+    grid-column:3/5;
+}
+}
+@media only screen and (min-width:1200px){
+    .headerTitle{
+        width:860px;
+        padding:55px;
+    }
+    .headerTitle > h1{
+        font-size:115px;
+    }
+    #ytho{
+        padding-left:25vw;
+        padding-right:25vw;
+    }
+}
